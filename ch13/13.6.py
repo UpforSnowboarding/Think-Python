@@ -53,7 +53,7 @@ def subtract(d1,d2):
 	return set(d1) - set(d2)
 
 def main():
-	hist = process_file(book1, skip_header = True)
+	hist = process_file(book1, skip_header = False)
 	words = process_file(book2, skip_header = False)
 	diff = subtract(hist,words)
 	print("The words in the book that aren't in the word list are: ")
