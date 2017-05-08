@@ -1,30 +1,34 @@
-def do_twice(f):
-	f()
-	f()
+def do_twice(func):
+    func()
+    func()
 
-def do_four(f):
-	do_twice(f)
-	do_twice(f)
+def do_four(func):
+    do_twice(func)
+    do_twice(func)
 
-def print_line():
-	print("+ - - - -", end = ' ')
+def print_post():
+    print("+ - - - - ", end = '')
 
 def print_bar():
-	print("|        ", end = ' ')
+    print("|         ", end = '')
 
-def print_plus_minus():
-	do_twice(print_line)
-	print("+")
 
-def print_middle():
-	do_twice(print_bar)
-	print("|")
+def top_bar():
+    do_twice(print_post)
+    print("+")
 
-def print_grid():
-	print_plus_minus()
-	do_four(print_middle)
-	print_plus_minus()
-	do_four(print_middle)
-	print_plus_minus()
+def mid_sect():
+    do_twice(print_bar)
+    print("|")
 
-print_grid()
+def whole_mid_sect():
+    do_four(mid_sect)
+
+def grid_form():
+    top_bar()
+    whole_mid_sect()
+    top_bar()
+    whole_mid_sect()
+    top_bar()
+
+grid_form()
