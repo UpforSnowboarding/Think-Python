@@ -17,6 +17,12 @@ def is_palindrome(word):
 
 print(is_palindrome('redivider'))
 
+# Version 2
 
+def is_palin(word):
+    if word == word[::-1]:
+        return True
+    else:
+        return False
 
 
