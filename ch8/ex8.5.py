@@ -27,7 +27,8 @@ def encrypt_letter(char,n):
         return char
 
     letter = ord(char) - begin
-    enc_letter = (letter + n) % 26 + begin
+    enc_letter = (letter + n) % 26 + begin # the modulo % 26 instils the base case, ensures the evaluation doesn't exceed the upper
+    #bound of the key (no. of chars in the alphabet i.e. 26)
     return chr(enc_letter)
 
 print(encrypt_letter('B', 5))
