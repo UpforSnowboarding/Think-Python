@@ -11,3 +11,11 @@ forbidden = 'a','e','w','b','z','c','t'
 for line in wordlist:
     if avoids(line,forbidden):
         print(line)
+
+# second section where the users input the forbidden characters
+
+forbidden = input('Please enter the letters you want to exclude: ')
+
+for line in wordlist:
+    if avoids(line,forbidden):
+        print(line)
