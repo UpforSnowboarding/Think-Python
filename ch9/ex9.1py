@@ -1,0 +1,8 @@
+with open('words.txt') as fd:
+    wordlist = fd.read().split()
+    for word in wordlist:
+        if len(word) > 20:
+            print(word)
+
+# Or, using list comprehension
+print([word for word in wordlist if len(word) > 20])
