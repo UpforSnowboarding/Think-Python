@@ -5,9 +5,9 @@ def avoids(word,forbiddenletters):
     for letter in word:
         if letter in forbiddenletters:
             return False
-    return word
+    return True
 
-forbidden = 'a','e','w','b','z','c','t'
+forbidden = 'aewbzct'
 for line in wordlist:
     if avoids(line,forbidden):
         print(line)
